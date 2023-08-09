@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Pacifico&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c4923b32fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container-header">
+      <h1 class="headingText">Let's check the weather!</h1>
+      <form id="enterCity-form">
+        <input
+          type="text"
+          id="search-form"
+          placeholder="Enter city"
+          aria-label="Entercity"
+          aria-describedby="addon-wrapping"
+          autocomplete="off"
+          autofocus="on"
+        />
+        <button style="border: none">
+          <i class="fa-solid fa-magnifying-glass-location search-icon"></i>
+        </button>
+        <aside class="rightButton">
+          <button style="border: none" class="locationButton">
+            Current Location
+          </button>
+        </aside>
+      </form>
+
+      <aside class="left">
+        <table>
+          <thead>
+            <div class="cityupdate">
+              <h1 class="city">London</h1>
+              <p>
+                <span class="datetime">Thursday, 8 June, </span>
+              </p>
+              <p>
+                <span class="nowtime"> Current time is 18:00 </span>
+              </p>
+            </div>
+          </thead>
+          <tbody>
+            <th>
+              <div class="grid text-left gridleft" style="--bs-columns: 1">
+                <div>
+                  <img src="images/sun-with-face.png" width="40px" />
+                </div>
+                <h2 id="temperature" class="degree">
+                  <span id="temperature-value">17.89</span>
+                  <a
+                    href="#"
+                    id="celsius-link"
+                    onclick="convertToCelsius(); return false;"
+                    >°C</a
+                  >
+                  |
+                  <a
+                    href="#"
+                    id="fahrenheit-link"
+                    onclick="convertToFahrenheit(); return false;"
+                    >°F</a
+                  >
+                </h2>
+                <p class="updation">Updated at 20:30</p>
+              </div>
+            </th>
+            <td>
+              <div class="container">
+                <div class="col feels-like">Feels like 16°</div>
+                <div class="col wind-speed">Wind 5kph</div>
+                <div class="col sunset-time">Sunset : 20:30</div>
+                <div class="col hi-lo-temp">Hi : 22° | Lo: 9°</div>
+              </div>
+            </td>
+          </tbody>
+        </table>
+      </aside>
+
+      <aside class="right">
+        <table class="dailytable">
+          <tr>
+            <td id="days">Tuesday</td>
+            <td class="tableemoji">
+              <img src="images/sun-behind-small-cloud.png" width="20px" />
+              <img src="images/crescent-moon.png" width="20px" />
+            </td>
+
+            <td class="numbers">19&deg;</td>
+            <td class="numbers">18&deg;</td>
+          </tr>
+          <tr>
+            <td id="days">Wednesday</td>
+            <td class="tableemoji">
+              <img src="images/sun-with-face.png" width="20px" />
+              <img src="images/crescent-moon.png" width="20px" />
+            </td>
+
+            <td class="numbers">22&deg;</td>
+            <td class="numbers">8&deg;</td>
+          </tr>
+          <tr>
+            <td id="days">Thursday</td>
+            <td class="tableemoji">
+              <img src="images/sun-behind-small-cloud.png" width="20px" />
+              <img src="images/crescent-moon.png" width="20px" />
+            </td>
+
+            <td class="numbers">22&deg;</td>
+            <td class="numbers">10&deg;</td>
+          </tr>
+          <tr>
+            <td id="days">Friday</td>
+            <td class="tableemoji">
+              <img src="images/sun-behind-small-cloud.png" width="20px" />
+              <img src="images/crescent-moon.png" width="20px" />
+            </td>
+
+            <td class="numbers">23&deg;</td>
+            <td class="numbers">13&deg;</td>
+          </tr>
+          <tr>
+            <td id="days">Saturday</td>
+            <td class="tableemoji">
+              <img src="images/cloud-with-rain.png" width="20px" />
+              <img src="images/cloud-with-rain.png" width="20px" />
+            </td>
+
+            <td class="numbers">19&deg;</td>
+            <td class="numbers">18&deg;</td>
+          </tr>
+        </table>
+      </aside>
+      <div class="container text-center weatherTable">
+        <div class="row row-cols-8">
+          <div class="col time">
+            1 PM
+            <span class="degree">20&deg;C</span>
+            <span class="emoji">
+              <img src="images/sun-with-face.png" width="20px"
+            /></span>
+          </div>
+
+          <div class="col time">
+            2 PM
+            <span class="degree">20&deg;C</span>
+            <span class="emoji">
+              <img src="images/sun-with-face.png" width="20px"
+            /></span>
+          </div>
+          <div class="col time">
+            3 PM
+            <span class="degree">21&deg;C</span>
+            <span class="emoji">
+              <img src="images/sun-with-face.png" width="20px"
+            /></span>
+          </div>
+          <div class="col time">
+            4 PM
+            <span class="degree">21&deg;C</span>
+            <span class="emoji">
+              <img src="images/sun-with-face.png" width="20px"
+            /></span>
+          </div>
+          <div class="col time">
+            5 PM
+            <span class="degree">18&deg;C</span>
+            <span class="emoji">
+              <img src="images/sun-behind-small-cloud.png" width="20px"
+            /></span>
+          </div>
+          <div class="col time">
+            6 PM
+            <span class="degree">17&deg;C</span>
+            <span class="emoji">
+              <img src="images/sun-behind-small-cloud.png" width="20px"
+            /></span>
+          </div>
+          <div class="col time">
+            7 PM
+            <span class="degree">13&deg;C</span>
+            <span class="emoji">
+              <img src="images/sun-behind-cloud.png" width="20px"
+            /></span>
+          </div>
+          <div class="col time">
+            8 PM
+            <span class="degree">11&deg;C</span>
+            <span class="emoji">
+              <img src="images/sunset.png" width="20px"
+            /></span>
+          </div>
+          <div class="forecast">
+            <div class="row row-cols-8">
+              <div class="col feels-like">Feels like 16&deg;C</div>
+              <div class="col feels-like">Feels like 16&deg;C</div>
+              <div class="col feels-like">Feels like 18&deg;C</div>
+              <div class="col feels-like">Feels like 15&deg;C</div>
+              <div class="col feels-like">Feels like 15&deg;C</div>
+              <div class="col feels-like">Feels like 15&deg;C</div>
+              <div class="col feels-like">Feels like 11&deg;C</div>
+              <div class="col feels-like">Feels like 9&deg;C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

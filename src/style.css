@@ -1,0 +1,167 @@
+body {
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/103/original/srping4.jpg?1686421828")
+    no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: auto;
+  display: block;
+  padding-top: 150px;
+  border-radius: 6px;
+}
+
+.headingText {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  font-weight: lighter;
+  padding: 15px 15px 15px 15px;
+  text-align: center;
+}
+
+#enterCity-form {
+  width: 500px;
+  height: 40px;
+  padding: 0.5px;
+}
+.search-icon {
+  font-size: 20px;
+  color: rgb(128, 0, 64);
+  border: 20px rgb(128, 0, 64);
+  display: block;
+  background: transparent;
+}
+.locationButton {
+  font-size: 15px;
+  color: black;
+  padding: 5px;
+  border: 2px solid rgb(128, 0, 64);
+  color: white;
+  background: rgb(128, 0, 64);
+  position: absolute;
+}
+aside.rightButton {
+  float: right;
+  width: 50%;
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+  padding: 0.5px 0.5px 0.5px 0.5px;
+}
+
+.search-icon:hover,
+.locationButton:hover {
+  cursor: pointer;
+  color: rgb(128, 0, 64);
+  background: white;
+  text-decoration: underline;
+}
+.container-header {
+  margin: 0 auto;
+  width: 800px;
+  height: 500px;
+  padding: 15px 20px 40px 20px;
+  border-radius: 6px;
+  background: linear-gradient(
+    179.4deg,
+    rgb(253, 240, 233) 2.2%,
+    rgb(255, 194, 203) 96.2%
+  );
+}
+.cityupdate,
+.city {
+  text-align: left;
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  font-weight: light;
+  line-height: 10px;
+  padding: 10px 10px 10px 0.2px;
+  margin-right: 0;
+}
+.degree {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0 5px 0 5px;
+}
+
+.degree a {
+  text-decoration: none;
+}
+
+.datetime,
+.nowtime {
+  font-size: 15px;
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+  line-height: 5px;
+  margin-right: 0;
+}
+
+th,
+td {
+  font-size: 10px;
+  font-style: italic;
+  text-align: left;
+  padding: 5px 5px 5px 5px;
+}
+.container {
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+  padding: 5px 5px 5px 5px;
+}
+.dailytable {
+  float: right;
+  border: 1px solid rgb(245, 150, 150);
+  padding: 0;
+  margin: 0;
+  padding: 5px 5px 5px 5px;
+  font-size: 30px;
+  border-collapse: collapse;
+}
+#days {
+  font-size: 18px;
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+}
+aside.left {
+  float: left;
+  width: 40%;
+  padding: 3px 0.5px 0.5px 0.5px;
+}
+aside.right {
+  float: right;
+  width: 50%;
+  padding: 15px 0.5px 0.5px 0.5px;
+}
+
+.numbers {
+  font-size: 18px;
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+}
+.weatherTable {
+  display: grid;
+  margin: 0;
+  text-align: center;
+  padding: 5px 5px 5px 5px;
+  max-width: 100%;
+}
+.weatherTable .col {
+  margin: 0 auto;
+  border: 1px double rgb(245, 150, 150);
+}
+.time {
+  font-size: 20px;
+  font-weight: bold;
+}
+.degree {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0 5px 0 5px;
+}
+
+.forecast {
+  font-size: 11px;
+  display: grid;
+  bottom: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
