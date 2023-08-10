@@ -47,84 +47,62 @@
         </aside>
       </form>
 
-      <div class="cityupdate">
-        <div class="col-4" id="dailytable">
-          <ul>
-            <li id="days">
-              Tuesday
+      <div class="detailedWeatherApp">
+        <aside class="right">
+          <table class="dailytable">
+            <tr>
+              <td id="days">Tuesday</td>
+              <td class="tableemoji">
+                <img src="images/sun-behind-small-cloud.png" width="20px" />
+                <img src="images/crescent-moon.png" width="20px" />
+              </td>
 
-              <img
-                src="images/sun-behind-small-cloud.png"
-                width="20px"
-                class="tableemoji"
-              />
-              <img
-                src="images/crescent-moon.png"
-                width="20px"
-                class="tableemoji"
-              />
-              <span class="numbers">19°C | 18°C</span>
-            </li>
+              <td class="numbers">19&deg;</td>
+              <td class="numbers">18&deg;</td>
+            </tr>
+            <tr>
+              <td id="days">Wednesday</td>
+              <td class="tableemoji">
+                <img src="images/sun-with-face.png" width="20px" />
+                <img src="images/crescent-moon.png" width="20px" />
+              </td>
 
-            <li id="days">
-              Wednesday
-              <img
-                src="images/sun-with-face.png"
-                width="20px"
-                class="tableemoji"
-              />
-              <img
-                src="images/crescent-moon.png"
-                width="20px"
-                class="tableemoji"
-              />
-              <span class="numbers">22°C | 8°C</span>
-            </li>
-            <li id="days">
-              Thursday
-              <img
-                src="images/sun-behind-small-cloud.png"
-                width="20px"
-                class="tableemoji"
-              />
-              <img
-                src="images/crescent-moon.png"
-                width="20px"
-                class="tableemoji"
-              />
-              <span class="numbers">22°C | 10°C</span>
-            </li>
-            <li id="days">
-              Friday
-              <img
-                src="images/sun-behind-small-cloud.png"
-                width="20px"
-                class="tableemoji"
-              />
-              <img
-                src="images/crescent-moon.png"
-                width="20px"
-                class="tableemoji"
-              />
-              <span class="numbers">23°C | 13°C</span>
-            </li>
-            <li id="days">
-              Saturday
-              <img
-                src="images/cloud-with-rain.png"
-                width="20px"
-                class="tableemoji"
-              />
-              <img
-                src="images/crescent-moon.png"
-                width="20px"
-                class="tableemoji"
-              />
-              <span class="numbers">19°C | 18°C</span>
-            </li>
-          </ul>
-        </div>
-        <ul>
+              <td class="numbers">22&deg;</td>
+              <td class="numbers">8&deg;</td>
+            </tr>
+            <tr>
+              <td id="days">Thursday</td>
+              <td class="tableemoji">
+                <img src="images/sun-behind-small-cloud.png" width="20px" />
+                <img src="images/crescent-moon.png" width="20px" />
+              </td>
+
+              <td class="numbers">22&deg;</td>
+              <td class="numbers">10&deg;</td>
+            </tr>
+            <tr>
+              <td id="days">Friday</td>
+              <td class="tableemoji">
+                <img src="images/sun-behind-small-cloud.png" width="20px" />
+                <img src="images/crescent-moon.png" width="20px" />
+              </td>
+
+              <td class="numbers">23&deg;</td>
+              <td class="numbers">13&deg;</td>
+            </tr>
+            <tr>
+              <td id="days">Saturday</td>
+              <td class="tableemoji">
+                <img src="images/cloud-with-rain.png" width="20px" />
+                <img src="images/cloud-with-rain.png" width="20px" />
+              </td>
+
+              <td class="numbers">19&deg;</td>
+              <td class="numbers">18&deg;</td>
+            </tr>
+          </table>
+        </aside>
+        <ul class="cityupdate">
           <li class="city">London</li>
           <li class="datetime">Thursday, 8 June,</li>
           <li class="nowtime">Current time is 18:00</li>
@@ -132,7 +110,7 @@
       </div>
       <div class="row">
         <div class="col-4">
-          <img src="images/sun-with-face.png" width="40px" />
+          <img src="images/sun-with-face.png" width="40px" class="float-left" />
 
           <span id="temperature-value">17</span>
           <a
@@ -157,9 +135,9 @@
           <li class="hi-lo-temp">Hi : 22°C | Lo: 9°C</li>
         </div>
       </div>
-      <div class="container text-center weatherTable">
+      <div class="weatherTable">
         <div class="row row-cols-8">
-          <div class="col time">
+          <div class="col" id="time">
             1 PM
             <span class="degree">20&deg;C</span>
             <span class="emoji">
@@ -167,49 +145,49 @@
             /></span>
           </div>
 
-          <div class="col time">
+          <div class="col" id="time">
             2 PM
             <span class="degree">20&deg;C</span>
             <span class="emoji">
               <img src="images/sun-with-face.png" width="20px"
             /></span>
           </div>
-          <div class="col time">
+          <div class="col" id="time">
             3 PM
             <span class="degree">21&deg;C</span>
             <span class="emoji">
               <img src="images/sun-with-face.png" width="20px"
             /></span>
           </div>
-          <div class="col time">
+          <div class="col" id="time">
             4 PM
             <span class="degree">21&deg;C</span>
             <span class="emoji">
               <img src="images/sun-with-face.png" width="20px"
             /></span>
           </div>
-          <div class="col time">
+          <div class="col" id="time">
             5 PM
             <span class="degree">18&deg;C</span>
             <span class="emoji">
               <img src="images/sun-behind-small-cloud.png" width="20px"
             /></span>
           </div>
-          <div class="col time">
+          <div class="col" id="time">
             6 PM
             <span class="degree">17&deg;C</span>
             <span class="emoji">
               <img src="images/sun-behind-small-cloud.png" width="20px"
             /></span>
           </div>
-          <div class="col time">
+          <div class="col" id="time">
             7 PM
             <span class="degree">13&deg;C</span>
             <span class="emoji">
               <img src="images/sun-behind-cloud.png" width="20px"
             /></span>
           </div>
-          <div class="col time">
+          <div class="col" id="time">
             8 PM
             <span class="degree">11&deg;C</span>
             <span class="emoji">

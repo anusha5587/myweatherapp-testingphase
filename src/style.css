@@ -83,9 +83,9 @@ li {
 
 .cityupdate {
   text-align: left;
-  font-family: "Cedarville Cursive", cursive;
+  font-family: "Pacifico", cursive;
   font-size: 25px;
-  font-weight: 800;
+  font-weight: 200;
   margin-right: 0;
   padding-top: 10px;
   padding-bottom: 15px;
@@ -93,7 +93,7 @@ li {
 
 #container {
   font-family: "Ysabeau Infant", sans-serif;
-  font-size: 4px;
+  font-size: 10px;
   font-style: italic;
   text-align: left;
   line-height: 1.2;
@@ -109,26 +109,27 @@ td {
 }
 
 #dailytable {
-  float: right;
-  border: 1px solid rgb(245, 150, 150);
   padding: 0;
   margin: 0;
   line-height: 2;
-  font-size: 11px;
-  font-family: "Cedarville Cursive", cursive;
-  font-weight: 600;
+  font-size: 15px;
+  font-family: "Ysabeau Infant", sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  position: relative;
   border-collapse: collapse;
 }
 
 aside.right {
   float: right;
-  width: 50%;
-  padding: 0.2px 0.5px 0.5px 0.5px;
+  text-align: center;
+  border: 1px solid rgb(245, 150, 150);
+  width: 30%;
 }
 
 .weatherTable {
   display: grid;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
   padding: 5px 5px 5px 5px;
   max-width: 100%;
@@ -141,9 +142,9 @@ aside.right {
   padding: 0 5px 0 5px;
 }
 
-.time {
+#time {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .forecast {
