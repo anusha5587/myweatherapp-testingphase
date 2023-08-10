@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Pacifico&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Cedarville+Cursive&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,700&family=Kablammo&family=Open+Sans:ital,wght@0,300;1,300;1,400;1,500&family=Pacifico&family=Quicksand:wght@300;400;500;600;700&family=Syne+Tactile&family=Ysabeau+Infant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
     <script
@@ -49,78 +49,80 @@
 
       <div class="cityupdate">
         <div class="col-4" id="dailytable">
-          <li id="days">
-            Tuesday
+          <ul>
+            <li id="days">
+              Tuesday
 
-            <img
-              src="images/sun-behind-small-cloud.png"
-              width="20px"
-              class="tableemoji"
-            />
-            <img
-              src="images/crescent-moon.png"
-              width="20px"
-              class="tableemoji"
-            />
-            <span class="numbers">19°C | 18°C</span>
-          </li>
+              <img
+                src="images/sun-behind-small-cloud.png"
+                width="20px"
+                class="tableemoji"
+              />
+              <img
+                src="images/crescent-moon.png"
+                width="20px"
+                class="tableemoji"
+              />
+              <span class="numbers">19°C | 18°C</span>
+            </li>
 
-          <li id="days">
-            Wednesday
-            <img
-              src="images/sun-with-face.png"
-              width="20px"
-              class="tableemoji"
-            />
-            <img
-              src="images/crescent-moon.png"
-              width="20px"
-              class="tableemoji"
-            />
-            <span class="numbers">22°C | 8°C</span>
-          </li>
-          <li id="days">
-            Thursday
-            <img
-              src="images/sun-behind-small-cloud.png"
-              width="20px"
-              class="tableemoji"
-            />
-            <img
-              src="images/crescent-moon.png"
-              width="20px"
-              class="tableemoji"
-            />
-            <span class="numbers">22°C | 10°C</span>
-          </li>
-          <li id="days">
-            Friday
-            <img
-              src="images/sun-behind-small-cloud.png"
-              width="20px"
-              class="tableemoji"
-            />
-            <img
-              src="images/crescent-moon.png"
-              width="20px"
-              class="tableemoji"
-            />
-            <span class="numbers">23°C | 13°C</span>
-          </li>
-          <li id="days">
-            Saturday
-            <img
-              src="images/cloud-with-rain.png"
-              width="20px"
-              class="tableemoji"
-            />
-            <img
-              src="images/crescent-moon.png"
-              width="20px"
-              class="tableemoji"
-            />
-            <span class="numbers">19°C | 18°C</span>
-          </li>
+            <li id="days">
+              Wednesday
+              <img
+                src="images/sun-with-face.png"
+                width="20px"
+                class="tableemoji"
+              />
+              <img
+                src="images/crescent-moon.png"
+                width="20px"
+                class="tableemoji"
+              />
+              <span class="numbers">22°C | 8°C</span>
+            </li>
+            <li id="days">
+              Thursday
+              <img
+                src="images/sun-behind-small-cloud.png"
+                width="20px"
+                class="tableemoji"
+              />
+              <img
+                src="images/crescent-moon.png"
+                width="20px"
+                class="tableemoji"
+              />
+              <span class="numbers">22°C | 10°C</span>
+            </li>
+            <li id="days">
+              Friday
+              <img
+                src="images/sun-behind-small-cloud.png"
+                width="20px"
+                class="tableemoji"
+              />
+              <img
+                src="images/crescent-moon.png"
+                width="20px"
+                class="tableemoji"
+              />
+              <span class="numbers">23°C | 13°C</span>
+            </li>
+            <li id="days">
+              Saturday
+              <img
+                src="images/cloud-with-rain.png"
+                width="20px"
+                class="tableemoji"
+              />
+              <img
+                src="images/crescent-moon.png"
+                width="20px"
+                class="tableemoji"
+              />
+              <span class="numbers">19°C | 18°C</span>
+            </li>
+          </ul>
         </div>
         <ul>
           <li class="city">London</li>
@@ -146,7 +148,7 @@
             onclick="convertToFahrenheit(); return false;"
             >°F</a
           >
-          <p class="updation">Updated at 20:30</p>
+          <span class="updation">Updated at 20:30</span>
         </div>
         <div class="col-4" id="container">
           <li class="feels-like">Feels like 16°C</li>

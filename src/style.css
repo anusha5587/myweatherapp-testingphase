@@ -11,7 +11,7 @@ body {
 .container-header {
   margin: 0 auto;
   width: 800px;
-  height: 450px;
+  height: 475px;
   padding: 15px 20px 40px 20px;
   border-radius: 6px;
   background: linear-gradient(
@@ -30,7 +30,7 @@ body {
 }
 
 #enterCity-form {
-  width: 500px;
+  max-width: 500px;
   height: 40px;
   padding: 0.5px;
 }
@@ -83,18 +83,21 @@ li {
 
 .cityupdate {
   text-align: left;
-  font-family: "Pacifico", cursive;
-  font-size: 20px;
-  font-weight: light;
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 25px;
+  font-weight: 800;
   margin-right: 0;
   padding-top: 10px;
   padding-bottom: 15px;
 }
-#shortWeatherData {
-  max-width: 200px;
-  display: block;
-  flex-shrink: 0;
-  margin-right: 0;
+
+#container {
+  font-family: "Ysabeau Infant", sans-serif;
+  font-size: 4px;
+  font-style: italic;
+  text-align: left;
+  line-height: 1.2;
+  padding: 5px 5px 5px 5px;
 }
 
 th,
@@ -112,7 +115,8 @@ td {
   margin: 0;
   line-height: 2;
   font-size: 11px;
-  font-family: "Pacifico", cursive;
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 600;
   border-collapse: collapse;
 }
 
@@ -154,10 +158,9 @@ footer {
   text-align: center;
   margin: 0 auto;
   border: 1px double rgb(245, 150, 150);
-  margin: auto;
   display: block;
   width: 800px;
-  padding: 10px 5px 10px 5px;
+  padding: 5px 5px 5px 5px;
   border-radius: 6px;
   font-family: "Pacifico", cursive;
   font-size: 15px;
