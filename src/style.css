@@ -184,3 +184,11 @@ footer {
     rgb(255, 194, 203) 96.2%
   );
 }
+
+footer a {
+  text-decoration: none;
+  color: rgb(128, 0, 64);
+}
+#footerLink:hover {
+  text-decoration: underline;
+}
