@@ -67,7 +67,6 @@ li {
   color: black;
   font-size: 16px;
   font-weight: 100;
-  line-height: 25px;
 }
 
 .cityupdate,
@@ -110,11 +109,12 @@ td {
   text-align: left;
   padding: 5px 5px 5px 5px;
 }
-.container {
-  font-size: 12px;
-  font-style: italic;
-  text-align: left;
-  padding: 5px 5px 5px 5px;
+
+#shortWeatherData {
+  max-width: 200px;
+  display: block;
+  flex-shrink: 0;
+  margin-right: 0;
 }
 .dailytable {
   float: right;
@@ -130,11 +130,7 @@ td {
   font-family: "Pacifico", cursive;
   font-weight: lighter;
 }
-aside.left {
-  float: left;
-  width: 40%;
-  padding: 3px 0.5px 0.5px 0.5px;
-}
+
 aside.right {
   float: right;
   width: 50%;
@@ -148,15 +144,13 @@ aside.right {
 }
 .weatherTable {
   display: grid;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   padding: 5px 5px 5px 5px;
   max-width: 100%;
-}
-.weatherTable .col {
-  margin: 0 auto;
   border: 1px double rgb(245, 150, 150);
 }
+
 .time {
   font-size: 20px;
   font-weight: bold;

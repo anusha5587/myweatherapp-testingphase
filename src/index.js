@@ -59,7 +59,7 @@ function time(timestamp) {
 }
 
 function weatherData(data) {
-  let temperatureInCelsius = 17.89;
+  let temperatureInCelsius = 17;
   let roundedTemperature = temperatureInCelsius.toFixed(2);
   console.log(roundedTemperature);
 
@@ -97,10 +97,10 @@ function updateLastUpdated(data, timestamp) {
 
 function updateWeatherData(data) {
   console.log(data);
-  let feelsLike = document.querySelector(".col.feels-like");
+  let feelsLike = document.querySelector(".feels-like");
   feelsLike.textContent = `Feels like ${Math.round(data.main.feels_like)}°`;
 
-  let windSpeed = document.querySelector(".col.wind-speed");
+  let windSpeed = document.querySelector(".wind-speed");
   windSpeed.textContent = `Wind ${data.wind.speed} kph`;
 
   let sunsetData = { sys: { sunset: 1691501788000 } };
@@ -112,10 +112,10 @@ function updateWeatherData(data) {
     let options = { hour: "numeric", minute: "numeric" };
     return new Intl.DateTimeFormat(locale, options).format(date);
   }
-  let sunsetTime = document.querySelector(".col.sunset-time");
+  let sunsetTime = document.querySelector(".sunset-time");
   sunsetTime.textContent = `Sunset: ${getFormattedTime(sunset, locale)}`;
 
-  let hiLoTemp = document.querySelector(".col.hi-lo-temp");
+  let hiLoTemp = document.querySelector(".hi-lo-temp");
   let hiLoTempFormat = `Hi: ${Math.round(
     data.main.temp_max
   )}° | Lo: ${Math.round(data.main.temp_min)}°`;
