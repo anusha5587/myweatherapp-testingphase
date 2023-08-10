@@ -122,9 +122,9 @@ function updateWeatherData(data) {
   hiLoTemp.textContent = hiLoTempFormat;
 }
 
-function handleWeatherData(response) {
-  let cityName = response.data.name;
-  cityHeading.innerHTML = cityName;
+function handleWeatherData(data) {
+  let cityName = data.name;
+  cityHeading.textContent = cityName;
   console.log(cityName);
   let timestamp = data.dt;
   retrieveCurrentDate(cityName);

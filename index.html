@@ -47,55 +47,50 @@
         </aside>
       </form>
 
-      <aside class="left">
-        <table>
-          <thead>
-            <div class="cityupdate">
-              <h1 class="city">London</h1>
-              <p>
-                <span class="datetime">Thursday, 8 June, </span>
-              </p>
-              <p>
-                <span class="nowtime"> Current time is 18:00 </span>
-              </p>
+      <table>
+        <div class="cityupdate">
+          <ul>
+            <li class="city">London</li>
+            <li class="datetime">Thursday, 8 June,</li>
+            <li class="nowtime">Current time is 18:00</li>
+          </ul>
+        </div>
+
+        <tbody>
+          <th>
+            <div class="grid text-left gridleft" style="--bs-columns: 1">
+              <div>
+                <img src="images/sun-with-face.png" width="40px" />
+              </div>
+              <h2 id="temperature" class="degree">
+                <span id="temperature-value">17.89</span>
+                <a
+                  href="#"
+                  id="celsius-link"
+                  onclick="convertToCelsius(); return false;"
+                  >°C</a
+                >
+                |
+                <a
+                  href="#"
+                  id="fahrenheit-link"
+                  onclick="convertToFahrenheit(); return false;"
+                  >°F</a
+                >
+              </h2>
+              <p class="updation">Updated at 20:30</p>
             </div>
-          </thead>
-          <tbody>
-            <th>
-              <div class="grid text-left gridleft" style="--bs-columns: 1">
-                <div>
-                  <img src="images/sun-with-face.png" width="40px" />
-                </div>
-                <h2 id="temperature" class="degree">
-                  <span id="temperature-value">17.89</span>
-                  <a
-                    href="#"
-                    id="celsius-link"
-                    onclick="convertToCelsius(); return false;"
-                    >°C</a
-                  >
-                  |
-                  <a
-                    href="#"
-                    id="fahrenheit-link"
-                    onclick="convertToFahrenheit(); return false;"
-                    >°F</a
-                  >
-                </h2>
-                <p class="updation">Updated at 20:30</p>
-              </div>
-            </th>
-            <td>
-              <div class="container">
-                <div class="col feels-like">Feels like 16°</div>
-                <div class="col wind-speed">Wind 5kph</div>
-                <div class="col sunset-time">Sunset : 20:30</div>
-                <div class="col hi-lo-temp">Hi : 22° | Lo: 9°</div>
-              </div>
-            </td>
-          </tbody>
-        </table>
-      </aside>
+          </th>
+          <td>
+            <div class="container">
+              <div class="col feels-like">Feels like 16°</div>
+              <div class="col wind-speed">Wind 5kph</div>
+              <div class="col sunset-time">Sunset : 20:30</div>
+              <div class="col hi-lo-temp">Hi : 22° | Lo: 9°</div>
+            </div>
+          </td>
+        </tbody>
+      </table>
 
       <aside class="right">
         <table class="dailytable">

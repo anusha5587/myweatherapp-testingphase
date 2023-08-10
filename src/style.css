@@ -53,6 +53,33 @@ aside.rightButton {
   background: white;
   text-decoration: underline;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+}
+
+.cityupdate,
+.city {
+  text-align: left;
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  font-weight: light;
+  line-height: 10px;
+  padding: 10px 10px 10px 0.2px;
+  margin-right: 0;
+}
+
 .container-header {
   margin: 0 auto;
   width: 800px;
@@ -65,16 +92,7 @@ aside.rightButton {
     rgb(255, 194, 203) 96.2%
   );
 }
-.cityupdate,
-.city {
-  text-align: left;
-  font-family: "Pacifico", cursive;
-  font-size: 20px;
-  font-weight: light;
-  line-height: 10px;
-  padding: 10px 10px 10px 0.2px;
-  margin-right: 0;
-}
+
 .degree {
   font-size: 40px;
   font-weight: bold;
@@ -83,15 +101,6 @@ aside.rightButton {
 
 .degree a {
   text-decoration: none;
-}
-
-.datetime,
-.nowtime {
-  font-size: 15px;
-  font-family: "Pacifico", cursive;
-  font-weight: lighter;
-  line-height: 5px;
-  margin-right: 0;
 }
 
 th,
