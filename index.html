@@ -47,50 +47,46 @@
         </aside>
       </form>
 
-      <table>
-        <div class="cityupdate">
-          <ul>
-            <li class="city">London</li>
-            <li class="datetime">Thursday, 8 June,</li>
-            <li class="nowtime">Current time is 18:00</li>
-          </ul>
-        </div>
+      <div class="cityupdate">
+        <ul>
+          <li class="city">London</li>
+          <li class="datetime">Thursday, 8 June,</li>
+          <li class="nowtime">Current time is 18:00</li>
+        </ul>
+      </div>
 
-        <tbody>
-          <th>
-            <div class="grid text-left gridleft" style="--bs-columns: 1">
-              <div>
-                <img src="images/sun-with-face.png" width="40px" />
-              </div>
-              <h2 id="temperature" class="degree">
-                <span id="temperature-value">17.89</span>
-                <a
-                  href="#"
-                  id="celsius-link"
-                  onclick="convertToCelsius(); return false;"
-                  >°C</a
-                >
-                |
-                <a
-                  href="#"
-                  id="fahrenheit-link"
-                  onclick="convertToFahrenheit(); return false;"
-                  >°F</a
-                >
-              </h2>
+      <tbody>
+        <div class="row">
+          <div class="col-6">
+            <img src="images/sun-with-face.png" width="40px" />
+
+            <div id="temperature">
+              <span id="temperature-value">17.89</span>
+              <a
+                href="#"
+                id="celsius-link"
+                onclick="convertToCelsius(); return false;"
+                >°C</a
+              >
+              |
+              <a
+                href="#"
+                id="fahrenheit-link"
+                onclick="convertToFahrenheit(); return false;"
+                >°F</a
+              >
               <p class="updation">Updated at 20:30</p>
             </div>
-          </th>
-          <td>
-            <div class="container">
-              <div class="col feels-like">Feels like 16°</div>
-              <div class="col wind-speed">Wind 5kph</div>
-              <div class="col sunset-time">Sunset : 20:30</div>
-              <div class="col hi-lo-temp">Hi : 22° | Lo: 9°</div>
-            </div>
-          </td>
-        </tbody>
-      </table>
+          </div>
+
+          <div class="col-3" id="container">
+            <li class="feels-like">Feels like 16°</li>
+            <li class="wind-speed">Wind 5kph</li>
+            <li class="sunset-time">Sunset : 20:30</li>
+            <li class="hi-lo-temp">Hi : 22° | Lo: 9°</li>
+          </div>
+        </div>
+      </tbody>
 
       <aside class="right">
         <table class="dailytable">

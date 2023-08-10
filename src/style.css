@@ -57,6 +57,7 @@ aside.rightButton {
 ul {
   margin: 0;
   padding: 0;
+  margin-bottom: 0;
 }
 
 li {
@@ -66,7 +67,7 @@ li {
   color: black;
   font-size: 16px;
   font-weight: 100;
-  line-height: 19px;
+  line-height: 25px;
 }
 
 .cityupdate,
@@ -75,8 +76,7 @@ li {
   font-family: "Pacifico", cursive;
   font-size: 20px;
   font-weight: light;
-  line-height: 10px;
-  padding: 10px 10px 10px 0.2px;
+  padding: 0.5px 0.5px 0.5px 0.2px;
   margin-right: 0;
 }
 
