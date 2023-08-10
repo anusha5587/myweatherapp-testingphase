@@ -8,6 +8,18 @@ body {
   padding-top: 150px;
   border-radius: 6px;
 }
+.container-header {
+  margin: 0 auto;
+  width: 800px;
+  height: 500px;
+  padding: 15px 20px 40px 20px;
+  border-radius: 6px;
+  background: linear-gradient(
+    179.4deg,
+    rgb(253, 240, 233) 2.2%,
+    rgb(255, 194, 203) 96.2%
+  );
+}
 
 .headingText {
   font-family: "Pacifico", cursive;
@@ -69,27 +81,20 @@ li {
   font-weight: 100;
 }
 
-.cityupdate,
-.city {
+.cityupdate {
   text-align: left;
   font-family: "Pacifico", cursive;
   font-size: 20px;
   font-weight: light;
-  padding: 0.5px 0.5px 0.5px 0.2px;
   margin-right: 0;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
-
-.container-header {
-  margin: 0 auto;
-  width: 800px;
-  height: 500px;
-  padding: 15px 20px 40px 20px;
-  border-radius: 6px;
-  background: linear-gradient(
-    179.4deg,
-    rgb(253, 240, 233) 2.2%,
-    rgb(255, 194, 203) 96.2%
-  );
+#shortWeatherData {
+  max-width: 200px;
+  display: block;
+  flex-shrink: 0;
+  margin-right: 0;
 }
 
 .degree {
@@ -110,19 +115,13 @@ td {
   padding: 5px 5px 5px 5px;
 }
 
-#shortWeatherData {
-  max-width: 200px;
-  display: block;
-  flex-shrink: 0;
-  margin-right: 0;
-}
-.dailytable {
+#dailytable {
   float: right;
   border: 1px solid rgb(245, 150, 150);
   padding: 0;
   margin: 0;
-  padding: 5px 5px 5px 5px;
-  font-size: 30px;
+  font-size: 15px;
+  font-family: "Pacifico", cursive;
   border-collapse: collapse;
 }
 #days {
@@ -134,7 +133,7 @@ td {
 aside.right {
   float: right;
   width: 50%;
-  padding: 15px 0.5px 0.5px 0.5px;
+  padding: 0.2px 0.5px 0.5px 0.5px;
 }
 
 .numbers {
