@@ -91,6 +91,16 @@ li {
   padding-bottom: 15px;
 }
 
+.weather-refresh img {
+  text-align: left;
+}
+
+.weather-refresh strong {
+  color: red;
+  font-size: 50px;
+  font-weight: 400;
+}
+
 #container {
   font-family: "Ysabeau Infant", sans-serif;
   font-size: 10px;
