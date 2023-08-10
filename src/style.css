@@ -11,7 +11,7 @@ body {
 .container-header {
   margin: 0 auto;
   width: 800px;
-  height: 500px;
+  height: 450px;
   padding: 15px 20px 40px 20px;
   border-radius: 6px;
   background: linear-gradient(
@@ -97,16 +97,6 @@ li {
   margin-right: 0;
 }
 
-.degree {
-  font-size: 40px;
-  font-weight: bold;
-  padding: 0 5px 0 5px;
-}
-
-.degree a {
-  text-decoration: none;
-}
-
 th,
 td {
   font-size: 10px;
@@ -120,14 +110,10 @@ td {
   border: 1px solid rgb(245, 150, 150);
   padding: 0;
   margin: 0;
-  font-size: 15px;
+  line-height: 2;
+  font-size: 11px;
   font-family: "Pacifico", cursive;
   border-collapse: collapse;
-}
-#days {
-  font-size: 18px;
-  font-family: "Pacifico", cursive;
-  font-weight: lighter;
 }
 
 aside.right {
@@ -136,11 +122,6 @@ aside.right {
   padding: 0.2px 0.5px 0.5px 0.5px;
 }
 
-.numbers {
-  font-size: 18px;
-  font-family: "Pacifico", cursive;
-  font-weight: lighter;
-}
 .weatherTable {
   display: grid;
   margin: 0 auto;
@@ -150,14 +131,15 @@ aside.right {
   border: 1px double rgb(245, 150, 150);
 }
 
-.time {
-  font-size: 20px;
-  font-weight: bold;
-}
 .degree {
   font-size: 20px;
   font-weight: 400;
   padding: 0 5px 0 5px;
+}
+
+.time {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .forecast {
