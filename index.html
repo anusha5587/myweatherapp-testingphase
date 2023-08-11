@@ -111,46 +111,30 @@
       </div>
       <div class="row">
         <div class="col-5">
-          <div class="weather-refresh">
-            <img src="images/sun-with-face.png" width="60" alt="Sunny" />
-            <div>
-              <div class="temperatureUpdation">
-                <div id="temperature-value">
-                  <span class="tempnumber"> 17</span>
-                </div>
-                <div class="unitdegrees">
-                  <span
-                    class="celsiusunit"
-                    style="margin-left: -1px; display: none"
-                    aria-label="°Celsius"
-                    aria-disabled="true"
-                    role="button"
-                    >°C</span
-                  >
-                  <a
-                    href="#"
-                    id="celsius-link"
-                    onclick="convertToCelsius(); return false;"
-                    ><span aria-label="°Celsius">°C</span></a
-                  >
-
-                  <span class="unitseperator">|</span>
-                  <a
-                    href="#"
-                    id="fahrenheit-link"
-                    onclick="convertToFahrenheit(); return false;"
-                    ><span aria-label="°Fahrenheit">°F</span></a
-                  >
-                  <span
-                    class="fahrenheitunit"
-                    style="margin-left: -1px; display: none"
-                    aria-label="°Fahrenheit"
-                    aria-disabled="true"
-                    role="button"
-                    >°F</span
-                  >
-                </div>
-              </div>
+          <div class="clearfix weather-refresh">
+            <img
+              src="images/sun-with-face.png"
+              width="60"
+              alt="Sunny"
+              class="float-left"
+            />
+            <div class="temperatureUpdation" id="temperature-value">
+              <strong class="tempnumber"> 17</strong>
+              <span class="celsiusFarenheit">
+                <a
+                  href="#"
+                  id="celsius-link"
+                  onclick="convertToCelsius(); return false;"
+                  >°C</a
+                >
+                <span class="unitseperator">|</span>
+                <a
+                  href="#"
+                  id="fahrenheit-link"
+                  onclick="convertToFahrenheit(); return false;"
+                  >°F</a
+                >
+              </span>
             </div>
           </div>
         </div>

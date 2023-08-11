@@ -8,6 +8,7 @@ body {
   padding-top: 150px;
   border-radius: 6px;
 }
+
 .container-header {
   margin: 0 auto;
   width: 800px;
@@ -91,38 +92,21 @@ li {
   padding-bottom: 15px;
 }
 
-div {
-  display: block;
-}
 .weather-refresh img {
   margin-left: 0;
   padding-left: 0%;
   float: left;
   padding-top: 10px;
 }
-
-.unitdegrees {
-  font-size: 15px;
-  display: inline-block;
-  line-height: 24px;
-  margin-top: 6px;
-  padding-left: 6px;
-  vertical-align: top;
+.weather-refresh #units {
+  position: absolute;
+  font-size: 16px;
 }
-
-.unitdegrees a {
-  text-decoration: none;
-}
-.temperatureUpdation {
-  display: inline-block;
-  padding-left: 10px;
-  vertical-align: top;
-}
-
-.tempnumber {
-  color: black;
-  font-size: 50px;
+.weather-refresh strong {
+  color: red;
+  font-size: 60px;
   font-weight: 400;
+  line-height: 1.5;
 }
 
 #container {
@@ -165,12 +149,16 @@ aside.right {
 
 .weatherTable {
   display: grid;
-  font-family: "Ysabeau Infant", sans-serif;
   margin: 0;
+  max-width: 100%;
   text-align: center;
-  max-width: 800px;
+
   height: 30%;
-  border: 1px solid rgb(245, 150, 150);
+}
+
+.weatherTable .col {
+  margin: 0 auto;
+  border: 1px double rgb(245, 150, 150);
 }
 
 .degree {
