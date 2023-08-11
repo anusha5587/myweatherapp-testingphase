@@ -28,23 +28,31 @@
     <div class="container-header">
       <h1 class="headingText">Let's check the weather!</h1>
       <form id="enterCity-form">
-        <input
-          type="text"
-          id="search-form"
-          placeholder="Enter city"
-          aria-label="Entercity"
-          aria-describedby="addon-wrapping"
-          autocomplete="off"
-          autofocus="on"
-        />
-        <button style="border: none">
-          <i class="fa-solid fa-magnifying-glass-location search-icon"></i>
-        </button>
-        <aside class="rightButton">
-          <button style="border: none" class="locationButton">
-            Current Location
-          </button>
-        </aside>
+        <div class="row">
+          <div class="col-9">
+            <input
+              type="search"
+              id="search-form"
+              placeholder="Enter city"
+              class="form-control"
+              aria-label="Entercity"
+              aria-describedby="addon-wrapping"
+              autocomplete="off"
+              autofocus="on"
+            />
+          </div>
+          <div class="col-3">
+            <div class="search-wrapper">
+              <input type="text" class="search-input" />
+              <i class="fa-solid fa-magnifying-glass-location search-icon"></i>
+            </div>
+            <aside class="rightButton">
+              <button style="border: none" class="locationButton">
+                Current Location
+              </button>
+            </aside>
+          </div>
+        </div>
       </form>
 
       <div class="detailedWeatherApp">

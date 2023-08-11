@@ -2,7 +2,7 @@ let form = document.querySelector("#enterCity-form");
 let formInput = document.querySelector("#search-form");
 let cityHeading = document.querySelector(".city");
 let searchIcon = document.querySelector(".search-icon");
-let searchButton = searchIcon.closest("button");
+let searchButton = searchIcon.closest(".search-input");
 if (searchButton) {
   searchButton.addEventListener("click", searchingCity);
 }
