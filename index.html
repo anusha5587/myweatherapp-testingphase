@@ -114,20 +114,19 @@
           <div class="clearfix weather-refresh">
             <img
               src="images/sun-with-face.png"
-              width="60"
+              width="50"
               alt="Sunny"
-              class="float-left"
+              id="icon"
             />
             <div class="temperatureUpdation" id="temperature-value">
-              <strong class="tempnumber"> 17</strong>
-              <span class="celsiusFarenheit">
+              <strong class="tempnumber"> 17</strong
+              ><span id="units">
                 <a
                   href="#"
                   id="celsius-link"
                   onclick="convertToCelsius(); return false;"
-                  >°C</a
-                >
-                <span class="unitseperator">|</span>
+                  >°C </a
+                ><span class="unitseperator">|</span>
                 <a
                   href="#"
                   id="fahrenheit-link"
@@ -138,7 +137,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-4" id="container">
           <li class="feels-like">Feels like 16°C</li>
           <li class="wind-speed">Wind 5kph</li>
@@ -146,8 +144,6 @@
           <li class="hi-lo-temp">Hi : 22°C | Lo: 9°C</li>
         </div>
       </div>
-      <br />
-
       <div class="weatherTable">
         <div class="row row-cols-8">
           <div class="col" id="time">
