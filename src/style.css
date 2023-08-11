@@ -35,31 +35,30 @@ body {
   height: 40px;
   padding: 0.5px;
 }
-.search-icon {
-  font-size: 35px;
-  color: rgb(128, 0, 64);
-  border: 20px rgb(128, 0, 64);
 
-  background: transparent;
-}
-.locationButton {
+.btn-primary {
   font-size: 15px;
-  color: black;
-  padding: 5px;
+  color: whitesmoke;
   border: 2px solid rgb(128, 0, 64);
   color: white;
   background: rgb(128, 0, 64);
-  position: absolute;
-}
-aside.rightButton {
-  float: right;
-  width: 50%;
   font-family: "Pacifico", cursive;
   font-weight: lighter;
-  padding: 0.5px 0.5px 0.5px 0.5px;
 }
 
-.search-icon:hover,
+.locationButton {
+  font-size: 15px;
+  float: right;
+
+  color: whitesmoke;
+  border: 2px solid rgb(128, 0, 64);
+  background: rgb(128, 0, 64);
+  position: absolute;
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+}
+
+.btn-primary:hover,
 .locationButton:hover {
   cursor: pointer;
   color: rgb(128, 0, 64);
@@ -161,7 +160,7 @@ aside.right {
   width: 30%;
 }
 
-.weatherTable {
+#weatherTable {
   display: grid;
   margin: 0;
   max-width: 100%;
@@ -170,7 +169,7 @@ aside.right {
   height: 30%;
 }
 
-.weatherTable .col {
+#weatherTable .col {
   margin: 0 auto;
   border: 1px double rgb(245, 150, 150);
 }

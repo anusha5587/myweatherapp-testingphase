@@ -21,13 +21,18 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container-header">
       <h1 class="headingText">Let's check the weather!</h1>
-      <form id="enterCity-form">
+      <form id="enterCity-form" class="mb-3">
         <div class="row">
           <div class="col-9">
             <input
@@ -41,13 +46,20 @@
               autofocus="on"
             />
           </div>
-          <div class="col-3">
-            <div class="search-wrapper">
-              <input type="text" class="search-input" />
-              <i class="fa-solid fa-magnifying-glass-location search-icon"></i>
-            </div>
+          <div class="col-3 d-flex justify-content-between">
+            <input
+              type="button"
+              value="Search"
+              placeholder="Search"
+              class="btn btn-primary"
+              style="border: none"
+              id="search-icon"
+            />
             <aside class="rightButton">
-              <button style="border: none" class="locationButton">
+              <button
+                style="border: none"
+                class="locationButton btn btn-primary"
+              >
                 Current Location
               </button>
             </aside>
@@ -152,7 +164,7 @@
           <li class="hi-lo-temp">Hi : 22°C | Lo: 9°C</li>
         </div>
       </div>
-      <div class="weatherTable">
+      <div class="mb-3" id="weatherTable">
         <div class="row row-cols-8">
           <div class="col" id="time">
             1 PM
