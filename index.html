@@ -110,23 +110,25 @@
       </div>
       <div class="row">
         <div class="col-5">
-          <div class="d-flex weather-refresh">
+          <div class="weather-refresh">
             <img src="images/sun-with-face.png" width="60" alt="Sunny" />
             <div class="float-left" id="temperature-value">
               <strong> 17</strong>
-              <a
-                href="#"
-                id="celsius-link"
-                onclick="convertToCelsius(); return false;"
-                >°C</a
-              >
-              |
-              <a
-                href="#"
-                id="fahrenheit-link"
-                onclick="convertToFahrenheit(); return false;"
-                >°F</a
-              >
+              <span class="units">
+                <a
+                  href="#"
+                  id="celsius-link"
+                  onclick="convertToCelsius(); return false;"
+                  >°C</a
+                >
+                |
+                <a
+                  href="#"
+                  id="fahrenheit-link"
+                  onclick="convertToFahrenheit(); return false;"
+                  >°F</a
+                >
+              </span>
             </div>
           </div>
         </div>
