@@ -57,8 +57,8 @@
                 <img src="images/crescent-moon.png" width="20px" />
               </td>
 
-              <td class="numbers">19&deg;</td>
-              <td class="numbers">18&deg;</td>
+              <td class="numbers">19°C</td>
+              <td class="numbers">18°C</td>
             </tr>
             <tr>
               <td id="days">Wednesday</td>
@@ -67,8 +67,8 @@
                 <img src="images/crescent-moon.png" width="20px" />
               </td>
 
-              <td class="numbers">22&deg;</td>
-              <td class="numbers">8&deg;</td>
+              <td class="numbers">22°C</td>
+              <td class="numbers">8°C</td>
             </tr>
             <tr>
               <td id="days">Thursday</td>
@@ -77,8 +77,8 @@
                 <img src="images/crescent-moon.png" width="20px" />
               </td>
 
-              <td class="numbers">22&deg;</td>
-              <td class="numbers">10&deg;</td>
+              <td class="numbers">22°C</td>
+              <td class="numbers">10°C</td>
             </tr>
             <tr>
               <td id="days">Friday</td>
@@ -87,8 +87,8 @@
                 <img src="images/crescent-moon.png" width="20px" />
               </td>
 
-              <td class="numbers">23&deg;</td>
-              <td class="numbers">13&deg;</td>
+              <td class="numbers">23°C</td>
+              <td class="numbers">13°C</td>
             </tr>
             <tr>
               <td id="days">Saturday</td>
@@ -97,8 +97,8 @@
                 <img src="images/cloud-with-rain.png" width="20px" />
               </td>
 
-              <td class="numbers">19&deg;</td>
-              <td class="numbers">18&deg;</td>
+              <td class="numbers">19°C</td>
+              <td class="numbers">18°C</td>
             </tr>
           </table>
         </aside>
@@ -113,26 +113,48 @@
         <div class="col-5">
           <div class="weather-refresh">
             <img src="images/sun-with-face.png" width="60" alt="Sunny" />
-            <div class="float-left" id="temperature-value">
-              <strong> 17</strong>
-              <span class="units">
-                <a
-                  href="#"
-                  id="celsius-link"
-                  onclick="convertToCelsius(); return false;"
-                  >°C</a
-                >
-                |
-                <a
-                  href="#"
-                  id="fahrenheit-link"
-                  onclick="convertToFahrenheit(); return false;"
-                  >°F</a
-                >
-              </span>
+            <div>
+              <div class="temperatureUpdation">
+                <div id="temperature-value">
+                  <span class="tempnumber"> 17</span>
+                </div>
+                <div class="unitdegrees">
+                  <span
+                    class="celsiusunit"
+                    style="margin-left: -1px; display: none"
+                    aria-label="°Celsius"
+                    aria-disabled="true"
+                    role="button"
+                    >°C</span
+                  >
+                  <a
+                    href="#"
+                    id="celsius-link"
+                    onclick="convertToCelsius(); return false;"
+                    ><span aria-label="°Celsius">°C</span></a
+                  >
+
+                  <span class="unitseperator">|</span>
+                  <a
+                    href="#"
+                    id="fahrenheit-link"
+                    onclick="convertToFahrenheit(); return false;"
+                    ><span aria-label="°Fahrenheit">°F</span></a
+                  >
+                  <span
+                    class="fahrenheitunit"
+                    style="margin-left: -1px; display: none"
+                    aria-label="°Fahrenheit"
+                    aria-disabled="true"
+                    role="button"
+                    >°F</span
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
         <div class="col-4" id="container">
           <li class="feels-like">Feels like 16°C</li>
           <li class="wind-speed">Wind 5kph</li>

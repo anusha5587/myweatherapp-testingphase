@@ -64,7 +64,7 @@ function weatherData(data) {
   console.log(roundedTemperature);
 
   let temperatureElement = document.querySelector("#temperature-value");
-  temperatureElement.innerHTML = Math.round(data.main.temp) + "°C";
+  temperatureElement.innerHTML = Math.round(data.main.temp);
 
   let celsiusLink = document.querySelector("#celsius-link");
   let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -82,17 +82,6 @@ function weatherData(data) {
   fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
   console.log(data);
-}
-
-function updateLastUpdated(data, timestamp) {
-  console.log(timestamp);
-  let currentTime = new Date();
-  let hours = currentTime.getHours();
-  let minutes = currentTime.getMinutes();
-  let minutesString = minutes.toString().padStart(2, "0");
-  let currentTimeString = hours + ":" + minutesString;
-  let updateTime = document.querySelector(".updation");
-  updateTime.textContent = `Updated at ${currentTimeString}`;
 }
 
 function updateWeatherData(data) {
@@ -131,7 +120,6 @@ function handleWeatherData(data) {
   time(timestamp);
   weatherData(data);
   updateWeatherData(data);
-  updateLastUpdated(data, timestamp);
   formInput.value = "";
 }
 
@@ -177,7 +165,6 @@ function searchingCity(event) {
   cityHeading.textContent = cityName;
   console.log(cityName);
   getWeatherData(cityName);
-
   formInput.value = "";
 }
 form.addEventListener("submit", searchingCity);
