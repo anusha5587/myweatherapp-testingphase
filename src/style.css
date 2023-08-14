@@ -40,22 +40,22 @@ body {
   font-size: 15px;
   color: whitesmoke;
   border: 2px solid rgb(128, 0, 64);
-  color: white;
   background: rgb(128, 0, 64);
   font-family: "Pacifico", cursive;
+  padding: 7px;
+  border-radius: 5px;
   font-weight: lighter;
 }
 
 .locationButton {
   font-size: 15px;
   float: right;
-
   color: whitesmoke;
-  border: 2px solid rgb(128, 0, 64);
   background: rgb(128, 0, 64);
   position: absolute;
   font-family: "Pacifico", cursive;
   font-weight: lighter;
+  display: block;
 }
 
 .btn-primary:hover,
@@ -81,14 +81,19 @@ li {
   font-weight: 100;
 }
 
-.cityupdate {
+.cityupdate,
+#city {
   text-align: left;
   font-family: "Pacifico", cursive;
   font-size: 25px;
   font-weight: 200;
   margin-right: 0;
   padding-top: 10px;
-  padding-bottom: 15px;
+}
+
+#city {
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .weather-refresh {
@@ -98,6 +103,7 @@ li {
 .weather-refresh img {
   margin-left: 0;
   padding-left: 0%;
+  padding-top: 12px;
   float: left;
   bottom: 10px;
   margin-left: auto;
