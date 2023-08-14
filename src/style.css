@@ -30,12 +30,6 @@ body {
   text-align: center;
 }
 
-#enterCity-form {
-  max-width: 500px;
-  height: 40px;
-  padding: 0.5px;
-}
-
 .btn-primary {
   font-size: 15px;
   color: whitesmoke;
@@ -47,19 +41,7 @@ body {
   font-weight: lighter;
 }
 
-.locationButton {
-  font-size: 15px;
-  float: right;
-  color: whitesmoke;
-  background: rgb(128, 0, 64);
-  position: absolute;
-  font-family: "Pacifico", cursive;
-  font-weight: lighter;
-  display: block;
-}
-
-.btn-primary:hover,
-.locationButton:hover {
+.btn-primary:hover {
   cursor: pointer;
   color: rgb(128, 0, 64);
   background: white;
@@ -107,6 +89,11 @@ li {
   line-height: 1.75;
 }
 
+#current-location {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
 .weather-refresh {
   text-align: center;
 }
