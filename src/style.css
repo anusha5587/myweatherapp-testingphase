@@ -114,7 +114,7 @@ li {
 
 .weather-refresh #units a {
   text-decoration: none;
-  color: black;
+  color: rgb(128, 0, 64);
   font-weight: bold;
 }
 
