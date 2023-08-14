@@ -79,7 +79,6 @@ li {
   color: black;
   font-size: 16px;
   font-weight: 100;
-  line-height: 2;
   text-transform: capitalize;
 }
 
@@ -107,17 +106,17 @@ li {
   font-size: 15px;
   line-height: 1.75;
 }
+
 .weather-refresh {
   text-align: center;
 }
 
 .weather-refresh img {
   margin-left: 0;
-  padding-left: 0%;
-  padding-top: 12px;
+  padding-left: 0;
   float: left;
   bottom: 10px;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
 }
 .weather-refresh #units {
@@ -182,7 +181,6 @@ aside.right {
   margin: 0;
   max-width: 100%;
   text-align: center;
-
   height: 30%;
 }
 

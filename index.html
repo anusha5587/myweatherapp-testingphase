@@ -32,12 +32,12 @@
   <body>
     <div class="container-header">
       <h1 class="headingText">Let's check the weather!</h1>
-      <form id="enterCity-form" class="mb-3">
+      <form id="search-form" class="mb-3">
         <div class="row">
-          <div class="col-9">
+          <div class="col-7">
             <input
               type="search"
-              id="search-form"
+              id="cityInput"
               placeholder="Enter city"
               class="form-control"
               aria-label="Entercity"
@@ -48,7 +48,7 @@
           </div>
           <div class="col-3 d-flex justify-content-between">
             <input
-              type="button"
+              type="submit"
               value="Search"
               placeholder="Search"
               class="btn btn-primary"
@@ -124,14 +124,14 @@
         </aside>
         <h1 id="city"></h1>
         <ul class="cityupdate">
-          <li class="datetime"></li>
+          <li id="datetime"></li>
           <li id="description"></li>
         </ul>
       </div>
       <div class="row">
         <div class="col-5">
           <div class="clearfix weather-refresh">
-            <img src="" width="60" alt="Sunny" id="icon" />
+            <img src="" width="80" alt="" id="icon" />
             <div class="temperatureUpdation" id="temperature-value">
               <strong id="tempNumber"></strong
               ><span id="units">
@@ -247,6 +247,6 @@
       >
       by Anoosha Anand
     </footer>
-    <script src="src/index.js"></script>
+    <script src="src/Testingindex.js"></script>
   </body>
 </html>
