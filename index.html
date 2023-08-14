@@ -122,10 +122,10 @@
             </tr>
           </table>
         </aside>
-        <h1 id="city">London</h1>
+        <h1 id="city"></h1>
         <ul class="cityupdate">
-          <li class="datetime">Thursday, 8 June, 18:00</li>
-          <li id="description">Sunny</li>
+          <li class="datetime"></li>
+          <li id="description"></li>
         </ul>
       </div>
       <div class="row">
@@ -138,7 +138,7 @@
               id="icon"
             />
             <div class="temperatureUpdation" id="temperature-value">
-              <strong id="tempNumber">17</strong
+              <strong id="tempNumber"></strong
               ><span id="units">
                 <a
                   href="#"
@@ -157,10 +157,15 @@
           </div>
         </div>
         <div class="col-4" id="container">
-          <li class="feels-like">Feels like 16°C</li>
-          <li class="wind-speed">Wind 5kph</li>
-          <li class="sunset-time">Sunset : 20:30</li>
-          <li class="hi-lo-temp">Hi : 22°C | Lo: 9°C</li>
+          <li class="feels-like">
+            Feels like : <span id="feelsLike"></span>°C
+          </li>
+          <li class="wind-speed">Wind : <span id="windSpeed"></span> kph</li>
+          <li class="sunset-time">Sunset : <span id="sunset"></span></li>
+          <li class="hi-lo-temp">
+            Hi : <span id="maxtemperature"></span>°C | Lo:
+            <span id="mintemperature"></span>°C
+          </li>
         </div>
       </div>
       <div class="mb-3" id="weatherTable">

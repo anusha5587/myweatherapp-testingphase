@@ -79,21 +79,29 @@ li {
   color: black;
   font-size: 16px;
   font-weight: 100;
+  line-height: 2;
+  text-transform: capitalize;
 }
 
-.cityupdate,
-#city {
+.cityupdate {
   text-align: left;
   font-family: "Pacifico", cursive;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 200;
   margin-right: 0;
+  line-height: 1.5;
   padding-top: 10px;
 }
 
 #city {
   padding-bottom: 0;
   margin-bottom: 0;
+  text-align: left;
+  font-family: "Pacifico", cursive;
+  font-size: 25px;
+  font-weight: 200;
+  margin-right: 0;
+  padding-top: 10px;
 }
 
 .weather-refresh {
