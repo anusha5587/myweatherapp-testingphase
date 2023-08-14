@@ -103,7 +103,10 @@ li {
   margin-right: 0;
   padding-top: 10px;
 }
-
+#description {
+  font-size: 15px;
+  line-height: 1.75;
+}
 .weather-refresh {
   text-align: center;
 }
