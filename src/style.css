@@ -142,14 +142,12 @@ td {
   font-family: "Ysabeau Infant", sans-serif;
   font-size: 15px;
   text-align: left;
-  padding: 5px 5px 5px 5px;
 }
 
 #dailytable {
   padding: 0;
   margin: 0;
   margin-right: 0;
-  line-height: 0.5;
   font-size: 15px;
   font-family: "Ysabeau Infant", sans-serif;
   font-weight: 800;
@@ -160,19 +158,23 @@ td {
 
 #forecastreport {
   float: right;
-  text-align: center;
-  border: 1px solid rgb(245, 150, 150);
+  text-align: right;
 }
 
 #weatherTable {
   display: grid;
-  border: 1px double rgb(245, 150, 150);
   padding: 0.5px;
   margin: 0;
   text-align: center;
   align-content: center;
   justify-content: center;
   align-items: center;
+}
+
+.tableemoji {
+  padding-left: 2px;
+  padding-right: 2px;
+  text-align: center;
 }
 
 #weatherTable .time {

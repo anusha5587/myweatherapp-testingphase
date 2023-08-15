@@ -68,7 +68,6 @@
           </div>
         </div>
       </form>
-
       <div id="forecastreport"></div>
       <div class="detailedWeatherApp" id="dailyforecast">
         <h1 id="city"></h1>
@@ -210,28 +209,3 @@
     <script src="src/index.js"></script>
   </body>
 </html>
-<table class="dailytable">
-  <aside class="right">
-    <tr>
-      <td id="days">${formatDay(forecastDay.dt)}</td>
-      <td>
-        <img
-          src="https://openweathermap.org/img/wn/${
-        forecastDay.weather[0].icon
-      }@2x.png"
-          alt=""
-          width="20px"
-        />
-      </td>
-      <td>
-        <span class="dailyMinTemp">${Math.round( forecastDay.temp.min )}</span
-        >°C
-      </td>
-      <td>
-        <span class="dailyMaxTemp">${Math.round( forecastDay.temp.max )}</span
-        >°C
-      </td>
-    </tr>
-  </aside>
-</table>
-`;

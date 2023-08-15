@@ -27,37 +27,32 @@ function forecastingReport(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecastreport");
 
-  let forecastHTML = `<div class="row-col-5">`;
-
+  let forecastHTML = `<div class="row-col-7">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
         `<table class="dailytable">
-  <aside class="right">
-    <tr>
-      <td id="days">${formatDay(forecastDay.dt)}</td>
-      <td>
-        <img
-          src="https://openweathermap.org/img/wn/${
-            forecastDay.weather[0].icon
-          }@2x.png"
-          alt=""
-          width="20px"
-        />
-      </td>
-      <td>
-        <span class="dailyMinTemp">${Math.round(forecastDay.temp.min)}</span
-        >°C
-      </td>
-      <td>
-        <span class="dailyMaxTemp">${Math.round(forecastDay.temp.max)}</span
-        >°C
-      </td>
-    </tr>
-  </aside>
-</table>
-`;
+        <aside class="right">
+         <tr>
+          <td id="days">${formatDay(forecastDay.dt)}
+          </td>
+          <td class="tableemoji">
+           <img src="https://openweathermap.org/img/wn/${
+             forecastDay.weather[0].icon
+           }@2x.png" width="30px" />
+           </td>
+           <td>
+               <span class="dailyMinTemp">${Math.round(forecastDay.temp.max)}
+              </span>°C
+              </td>
+              
+              <td>
+                <span class="dailyMaxTemp">${Math.round(forecastDay.temp.max)}
+              </span>°C</td>
+         </tr>
+        </aside>
+    </table>`;
     }
   });
   forecastHTML = forecastHTML + `</div>`;
