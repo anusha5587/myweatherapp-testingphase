@@ -16,6 +16,45 @@ function formatDate(timestamp) {
   return `${day}, ${hours}:${minutes}`;
 }
 
+function forecastingReport() {
+  let forecastElement = document.querySelector("#forecastreport");
+  let forecastHTML = `<div class="row-col-5">`;
+  let days = [
+    "Friday",
+    "Saturday",
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+  ];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<table class="dailytable">
+      <aside class="right">
+      <tr><td id="days">${day}</td>
+          <td class="tableemoji">
+            <img src="images/sun-behind-small-cloud.png" width="20px" />
+            </td>
+          <td class="numbers">19°C</td>
+          <td class="numbers">18°C</td>
+        </tr>
+      
+    </aside>
+    </table>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function dailyForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "97f8e93f00107773f88eafd933ce86b7";
+  let apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrlForecast);
+}
+
 function displayTemperature(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#tempNumber");
@@ -24,7 +63,6 @@ function displayTemperature(response) {
   let feelsLikeElement = document.querySelector("#feelsLike");
   let windSpeedElement = document.querySelector("#windSpeed");
   let datetimeElement = document.querySelector("#datetime");
-  let sunsetElement = document.querySelector("#sunset");
   let maxtempElement = document.querySelector("#maxtemperature");
   let mintempElement = document.querySelector("#mintemperature");
   let iconElement = document.querySelector("#icon");
@@ -38,17 +76,17 @@ function displayTemperature(response) {
   console.log(response.data.main.temp);
   windSpeedElement.innerHTML = response.data.wind.speed;
   datetimeElement.innerHTML = formatDate(response.data.dt * 1000);
-  sunsetElement.innerHTML = formatDate(response.data.sys.sunset * 1000);
   maxtempElement.innerHTML = Math.round(response.data.main.temp_max);
   mintempElement.innerHTML = Math.round(response.data.main.temp_min);
   iconElement.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  dailyForecast(response.data.coord);
 }
 
 function search(city) {
-  let apiKey = "88724523008dc9e1be18f6eb6a959b67";
+  let apiKey = "96ad27349a64ea1dcdfbe6f4d458c085";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -64,7 +102,7 @@ function weatherDataByGeolocation() {
     navigator.geolocation.getCurrentPosition(function (position) {
       let latitude = position.coords.latitude;
       let longitude = position.coords.longitude;
-      let apiKey = "88724523008dc9e1be18f6eb6a959b67";
+      let apiKey = "96ad27349a64ea1dcdfbe6f4d458c085";
       let apiUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
       axios.get(apiUrlCurrent).then(displayTemperature);
     });
@@ -102,3 +140,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displaycelsiusTemp);
 
 search("London");
+forecastingReport();

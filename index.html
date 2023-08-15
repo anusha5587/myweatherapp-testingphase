@@ -32,6 +32,7 @@
   <body>
     <div class="container-header">
       <h1 class="headingText">Let's check the weather!</h1>
+
       <form id="search-form" class="mb-3">
         <div class="row">
           <div class="col-7">
@@ -68,69 +69,17 @@
         </div>
       </form>
 
-      <div class="detailedWeatherApp">
-        <aside class="right">
-          <table class="dailytable">
-            <tr>
-              <td id="days">Tuesday</td>
-              <td class="tableemoji">
-                <img src="images/sun-behind-small-cloud.png" width="20px" />
-                <img src="images/crescent-moon.png" width="20px" />
-              </td>
-
-              <td class="numbers">19°C</td>
-              <td class="numbers">18°C</td>
-            </tr>
-            <tr>
-              <td id="days">Wednesday</td>
-              <td class="tableemoji">
-                <img src="images/sun-with-face.png" width="20px" />
-                <img src="images/crescent-moon.png" width="20px" />
-              </td>
-
-              <td class="numbers">22°C</td>
-              <td class="numbers">8°C</td>
-            </tr>
-            <tr>
-              <td id="days">Thursday</td>
-              <td class="tableemoji">
-                <img src="images/sun-behind-small-cloud.png" width="20px" />
-                <img src="images/crescent-moon.png" width="20px" />
-              </td>
-
-              <td class="numbers">22°C</td>
-              <td class="numbers">10°C</td>
-            </tr>
-            <tr>
-              <td id="days">Friday</td>
-              <td class="tableemoji">
-                <img src="images/sun-behind-small-cloud.png" width="20px" />
-                <img src="images/crescent-moon.png" width="20px" />
-              </td>
-
-              <td class="numbers">23°C</td>
-              <td class="numbers">13°C</td>
-            </tr>
-            <tr>
-              <td id="days">Saturday</td>
-              <td class="tableemoji">
-                <img src="images/cloud-with-rain.png" width="20px" />
-                <img src="images/cloud-with-rain.png" width="20px" />
-              </td>
-
-              <td class="numbers">19°C</td>
-              <td class="numbers">18°C</td>
-            </tr>
-          </table>
-        </aside>
+      <div id="forecastreport"></div>
+      <div class="detailedWeatherApp" id="dailyforecast">
         <h1 id="city"></h1>
         <ul class="cityupdate">
           <li id="datetime"></li>
           <li id="description"></li>
         </ul>
       </div>
+      <br />
       <div class="row">
-        <div class="col-5">
+        <div class="col-6">
           <div class="clearfix weather-refresh">
             <img src="" width="80" alt="" id="icon" />
             <div class="temperatureUpdation" id="temperature-value">
@@ -148,82 +97,87 @@
             Feels like : <span id="feelsLike"></span>°C
           </li>
           <li class="wind-speed">Wind : <span id="windSpeed"></span> kph</li>
-          <li class="sunset-time">Sunset : <span id="sunset"></span></li>
           <li class="hi-lo-temp">
             Hi : <span id="maxtemperature"></span>°C | Lo:
             <span id="mintemperature"></span>°C
           </li>
         </div>
       </div>
-      <div class="mb-3" id="weatherTable">
-        <div class="row row-cols-8">
-          <div class="col" id="time">
-            1 PM
-            <span class="degree">20&deg;C</span>
-            <span class="emoji">
-              <img src="images/sun-with-face.png" width="20px"
-            /></span>
-          </div>
+      <br />
+      <br />
+      <div id="weatherTable">
+        <div class="row">
+          <div class="row cols-5">
+            <div class="col" id="time">
+              1 PM
+              <span class="degree">20&deg;C</span>
+              <span class="emoji">
+                <img src="images/sun-with-face.png" width="20px"
+              /></span>
+            </div>
 
-          <div class="col" id="time">
-            2 PM
-            <span class="degree">20&deg;C</span>
-            <span class="emoji">
-              <img src="images/sun-with-face.png" width="20px"
-            /></span>
-          </div>
-          <div class="col" id="time">
-            3 PM
-            <span class="degree">21&deg;C</span>
-            <span class="emoji">
-              <img src="images/sun-with-face.png" width="20px"
-            /></span>
-          </div>
-          <div class="col" id="time">
-            4 PM
-            <span class="degree">21&deg;C</span>
-            <span class="emoji">
-              <img src="images/sun-with-face.png" width="20px"
-            /></span>
-          </div>
-          <div class="col" id="time">
-            5 PM
-            <span class="degree">18&deg;C</span>
-            <span class="emoji">
-              <img src="images/sun-behind-small-cloud.png" width="20px"
-            /></span>
-          </div>
-          <div class="col" id="time">
-            6 PM
-            <span class="degree">17&deg;C</span>
-            <span class="emoji">
-              <img src="images/sun-behind-small-cloud.png" width="20px"
-            /></span>
-          </div>
-          <div class="col" id="time">
-            7 PM
-            <span class="degree">13&deg;C</span>
-            <span class="emoji">
-              <img src="images/sun-behind-cloud.png" width="20px"
-            /></span>
-          </div>
-          <div class="col" id="time">
-            8 PM
-            <span class="degree">11&deg;C</span>
-            <span class="emoji">
-              <img src="images/sunset.png" width="20px"
-            /></span>
+            <div class="col" id="time">
+              2 PM
+              <span class="degree">20&deg;C</span>
+              <span class="emoji">
+                <img src="images/sun-with-face.png" width="20px"
+              /></span>
+            </div>
+            <div class="col" id="time">
+              3 PM
+              <span class="degree">21&deg;C</span>
+              <span class="emoji">
+                <img src="images/sun-with-face.png" width="20px"
+              /></span>
+            </div>
+            <div class="col" id="time">
+              4 PM
+              <span class="degree">21&deg;C</span>
+              <span class="emoji">
+                <img src="images/sun-with-face.png" width="20px"
+              /></span>
+            </div>
+            <div class="col" id="time">
+              5 PM
+              <span class="degree">18&deg;C</span>
+              <span class="emoji">
+                <img src="images/sun-behind-small-cloud.png" width="20px"
+              /></span>
+            </div>
+            <div class="col" id="time">
+              6 PM
+              <span class="degree">17&deg;C</span>
+              <span class="emoji">
+                <img src="images/sun-behind-small-cloud.png" width="20px"
+              /></span>
+            </div>
+            <div class="col" id="time">
+              7 PM
+              <span class="degree">13&deg;C</span>
+              <span class="emoji">
+                <img src="images/sun-behind-cloud.png" width="20px"
+              /></span>
+            </div>
+            <div class="col" id="time">
+              8 PM
+              <span class="degree">11&deg;C</span>
+              <span class="emoji">
+                <img src="images/sunset.png" width="20px"
+              /></span>
+            </div>
           </div>
           <div class="forecast">
-            <div class="row row-cols-8">
-              <div class="col feels-like">Feels like 16&deg;C</div>
-              <div class="col feels-like">Feels like 16&deg;C</div>
-              <div class="col feels-like">Feels like 18&deg;C</div>
-              <div class="col feels-like">Feels like 15&deg;C</div>
-              <div class="col feels-like">Feels like 15&deg;C</div>
-              <div class="col feels-like">Feels like 15&deg;C</div>
-              <div class="col feels-like">Feels like 11&deg;C</div>
-              <div class="col feels-like">Feels like 9&deg;C</div>
+            <div class="row">
+              <div class="row cols-5">
+                <div class="col">Feels like 16°C</div>
+                <div class="col">Feels like 16°C</div>
+                <div class="col">Feels like 18°C</div>
+                <div class="col">Feels like 15°C</div>
+                <div class="col">Feels like 15°C</div>
+                <div class="col">Feels like 15°C</div>
+                <div class="col">Feels like 11°C</div>
+                <div class="col">Feels like 9°C</div>
+              </div>
             </div>
           </div>
         </div>

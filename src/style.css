@@ -1,6 +1,5 @@
 body {
-  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/103/original/srping4.jpg?1686421828")
-    no-repeat center center fixed;
+  background: whitesmoke;
   background-size: cover;
   background-color: rgba(255, 255, 255, 0.5);
   margin: auto;
@@ -11,8 +10,8 @@ body {
 
 .container-header {
   margin: 0 auto;
-  width: 800px;
-  height: 475px;
+  width: 700px;
+  height: 500px;
   padding: 15px 20px 40px 20px;
   border-radius: 6px;
   background: linear-gradient(
@@ -150,51 +149,48 @@ td {
 #dailytable {
   padding: 0;
   margin: 0;
-  line-height: 2;
+  margin-right: 0;
+  line-height: 0.5;
   font-size: 15px;
   font-family: "Ysabeau Infant", sans-serif;
-  font-style: italic;
   font-weight: 800;
   position: relative;
   border-collapse: collapse;
   line-break: 2;
 }
 
-aside.right {
+#forecastreport {
   float: right;
-  text-align: center;
+  text-align: right;
   border: 1px solid rgb(245, 150, 150);
-  width: 30%;
 }
 
 #weatherTable {
   display: grid;
+  border: 1px double rgb(245, 150, 150);
+  padding: 0.5px;
   margin: 0;
-  max-width: 100%;
   text-align: center;
-  height: 30%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
-#weatherTable .col {
+#weatherTable .time {
+  font-size: 20px;
+  display: inline-block;
   margin: 0 auto;
-  border: 1px double rgb(245, 150, 150);
+  text-align: center;
+  padding: 0;
 }
 
 .degree {
-  font-size: 20px;
-  font-weight: 400;
-  padding: 0 5px 0 5px;
-}
-
-#time {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400;
 }
-
 .forecast {
   font-size: 12px;
-  display: grid;
-  margin: 0 auto;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -203,7 +199,7 @@ footer {
   margin: 0 auto;
   border: 1px double rgb(245, 150, 150);
   display: block;
-  width: 800px;
+  width: 700px;
   padding: 5px 5px 5px 5px;
   border-radius: 6px;
   font-family: "Pacifico", cursive;
