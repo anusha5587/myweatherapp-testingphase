@@ -139,26 +139,31 @@ li {
 
 th,
 td {
-  font-family: "Ysabeau Infant", sans-serif;
-  font-size: 15px;
+  font-size: 10px;
   text-align: left;
+  padding: 2px;
 }
 
-#dailytable {
+.dailytable {
+  float: right;
+  border: 1px solid rgb(245, 150, 150);
   padding: 0;
   margin: 0;
-  margin-right: 0;
-  font-size: 15px;
-  font-family: "Ysabeau Infant", sans-serif;
-  font-weight: 800;
-  position: relative;
-  border-collapse: collapse;
-  line-break: 2;
+  font-size: 20px;
+  border-collapse: separate;
+  border-spacing: 5px;
 }
 
-#forecastreport {
-  float: right;
-  text-align: right;
+#days {
+  font-size: 18px;
+  font-family: "Ysabeau Infant", sans-serif;
+  font-weight: bold;
+}
+.numbers {
+  font-size: 15px;
+  font-family: "Ysabeau Infant", sans-serif;
+  font-weight: lighter;
+  margin-right: 10px;
 }
 
 #weatherTable {

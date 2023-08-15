@@ -27,14 +27,13 @@ function forecastingReport(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecastreport");
 
-  let forecastHTML = `<div class="row-col-7">`;
+  let forecastHTML = `<div class="row-col-1">
+ <table class="dailytable">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 5) {
       forecastHTML =
         forecastHTML +
-        `<table class="dailytable">
-        <aside class="right">
-         <tr>
+        `<tr>
           <td id="days">${formatDay(forecastDay.dt)}
           </td>
           <td class="tableemoji">
@@ -42,20 +41,17 @@ function forecastingReport(response) {
              forecastDay.weather[0].icon
            }@2x.png" width="30px" />
            </td>
-           <td>
+           <td class="numbers">
                <span class="dailyMinTemp">${Math.round(forecastDay.temp.max)}
-              </span>°C
-              </td>
+              </span> °C </td>
               
-              <td>
+              <td class="numbers">
                 <span class="dailyMaxTemp">${Math.round(forecastDay.temp.max)}
-              </span>°C</td>
-         </tr>
-        </aside>
-    </table>`;
+              </span> °C </td>
+         </tr>`;
     }
   });
-  forecastHTML = forecastHTML + `</div>`;
+  forecastHTML = forecastHTML + `</table></div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
