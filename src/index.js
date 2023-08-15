@@ -52,7 +52,7 @@ function dailyForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "dc674c2ca83f4131e560bb9c76effa15";
   let apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrlForecast);
+  axios.get(apiUrlForecast).then(dailyForecast);
 }
 
 function displayTemperature(response) {
