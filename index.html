@@ -104,7 +104,6 @@
         </div>
       </div>
       <br />
-      <br />
       <div id="weatherTable">
         <div class="row">
           <div class="row cols-5">
@@ -115,7 +114,6 @@
                 <img src="images/sun-with-face.png" width="20px"
               /></span>
             </div>
-
             <div class="col">
               <span id="time">14:00</span>
               <span id="degree">20</span>°C
@@ -212,3 +210,28 @@
     <script src="src/index.js"></script>
   </body>
 </html>
+<table class="dailytable">
+  <aside class="right">
+    <tr>
+      <td id="days">${formatDay(forecastDay.dt)}</td>
+      <td>
+        <img
+          src="https://openweathermap.org/img/wn/${
+        forecastDay.weather[0].icon
+      }@2x.png"
+          alt=""
+          width="20px"
+        />
+      </td>
+      <td>
+        <span class="dailyMinTemp">${Math.round( forecastDay.temp.min )}</span
+        >°C
+      </td>
+      <td>
+        <span class="dailyMaxTemp">${Math.round( forecastDay.temp.max )}</span
+        >°C
+      </td>
+    </tr>
+  </aside>
+</table>
+`;

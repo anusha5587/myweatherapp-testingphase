@@ -11,7 +11,7 @@ body {
 .container-header {
   margin: 0 auto;
   width: 700px;
-  height: 500px;
+  height: 475px;
   padding: 15px 20px 40px 20px;
   border-radius: 6px;
   background: linear-gradient(
@@ -141,7 +141,6 @@ th,
 td {
   font-family: "Ysabeau Infant", sans-serif;
   font-size: 15px;
-  font-style: italic;
   text-align: left;
   padding: 5px 5px 5px 5px;
 }
@@ -161,7 +160,7 @@ td {
 
 #forecastreport {
   float: right;
-  text-align: right;
+  text-align: center;
   border: 1px solid rgb(245, 150, 150);
 }
 
@@ -184,7 +183,7 @@ td {
   padding: 0;
 }
 
-.degree {
+#degree {
   font-size: 15px;
   font-weight: 400;
 }
