@@ -166,44 +166,33 @@ td {
   margin-right: 10px;
 }
 
+.weather-table {
+  font-family: "Ysabeau Infant", sans-serif;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.weather-table-time {
+  font-size: 15px;
+}
+
+.weather-table-temp {
+  font-size: 15px;
+}
+
+.weather-table-feelslike {
+  font-size: 12px;
+}
+
 .tableemoji {
   padding-left: 2px;
   padding-right: 2px;
   text-align: center;
 }
 
-#weatherTable {
-  margin: auto;
-  text-align: center;
-  padding: 0;
-}
-
-#weatherTable .time {
-  font-size: 15px;
-  font-weight: 400;
-}
-
-#weatherTable .col {
-  border: 1px double rgb(245, 150, 150);
-}
-
-#degree {
-  font-size: 15px;
-  font-weight: 400;
-}
-
-.feelsliketemp {
-  font-size: 10px;
-  text-align: left;
-}
-
-.feelsliketemp span {
-  white-space: nowrap;
-}
-
 footer {
   text-align: center;
-  margin: 0 auto;
+  margin: 15px;
   border: 1px double rgb(245, 150, 150);
   display: block;
   width: 700px;
