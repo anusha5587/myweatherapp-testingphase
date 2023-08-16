@@ -64,18 +64,22 @@ function dailyForecast(coordinates) {
 
 function hourlyReport() {
   let hourlyForecastElement = document.querySelector(".weather-table");
-
-  hourlyForecastElement.innerHTML = `
-  <div class="row">
-          <div class="col-2">
-            <div class="weather-table-time">13:00</div>
-            <img src="images/sun-with-face.png" width="20px" />
-            <div class="weather-table-temp">20°C</div>
+  let hourlyForecastHTML = `<div class="row">`;
+  let hours = ["13:00", "14:00", "15:00"];
+  hours.forEach(function (hour) {
+    hourlyForecastHTML =
+      hourlyForecastHTML +
+      `<div class="col-2">
+        <div class="weather-table-time">${hour}</div>
+          <img src="images/sun-with-face.png" width="20px" />
+          <div class="weather-table-temp">20°C</div>
             <div class="weather-table-feelslike">Feels like 16°C</div>
-          </div>
-        </div>
-  
-  `;
+      </div>
+    `;
+  });
+
+  hourlyForecastHTML = hourlyForecastHTML + `</div>`;
+  hourlyForecastElement.innerHTML = hourlyForecastHTML;
 }
 
 function displayTemperature(response) {

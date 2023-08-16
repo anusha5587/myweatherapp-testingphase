@@ -174,14 +174,20 @@ td {
 
 .weather-table-time {
   font-size: 15px;
+  font-family: "Ysabeau Infant", sans-serif;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 .weather-table-temp {
-  font-size: 15px;
+  font-size: 18px;
+  font-family: "Ysabeau Infant", sans-serif;
+  font-weight: bold;
 }
 
 .weather-table-feelslike {
   font-size: 12px;
+  font-family: "Ysabeau Infant", sans-serif;
 }
 
 .tableemoji {
