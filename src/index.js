@@ -62,23 +62,43 @@ function dailyForecast(coordinates) {
   axios.get(apiUrlForecast).then(forecastingReport);
 }
 
+function formatHour(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let hour = date.getUTCHours();
+  let minutes = date.getMinutes();
+  let formattedTime = `${hour.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")}`;
+  return formattedTime;
+}
+
+let timestamp = 1692205200000;
+let formattedTime = formatHour(timestamp);
+console.log(formattedTime);
+
 function hourlyReport(response) {
-  console.log(response.data.hourly);
+  let forecast = response.data.hourly;
   let hourlyForecastElement = document.querySelector(".weather-table");
 
-  let hours = ["13:00", "14:00", "15:00"];
-
   let hourlyForecastHTML = `<div class="row">`;
-  hours.forEach(function (hour) {
-    hourlyForecastHTML =
-      hourlyForecastHTML +
-      `<div class="col-2">
-        <div class="weather-table-time">${hour}</div>
-          <img src="images/sun-with-face.png" width="20px" />
-          <div class="weather-table-temp">20°C</div>
-            <div class="weather-table-feelslike">Feels like 16°C</div>
+  forecast.forEach(function (forecastHour, index) {
+    if (index < 6) {
+      hourlyForecastHTML =
+        hourlyForecastHTML +
+        `<div class="col-2">
+        <div class="weather-table-time">${formatHour(forecastHour.dt)}</div>
+          <img src="https://openweathermap.org/img/wn/${
+            forecastHour.weather[0].icon
+          }@2x.png" width="30px"/>
+          <div class="weather-table-temp">${Math.round(
+            forecastHour.temp
+          )}°C</div>
+            <div class="weather-table-feelslike">Feels like ${Math.round(
+              forecastHour.feels_like
+            )}°C</div>
       </div>
     `;
+    }
   });
 
   hourlyForecastHTML = hourlyForecastHTML + `</div>`;
@@ -89,7 +109,7 @@ function hourlyForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
   let apiUrlHourly = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrlHourly);
+
   axios.get(apiUrlHourly).then(hourlyReport);
 }
 
