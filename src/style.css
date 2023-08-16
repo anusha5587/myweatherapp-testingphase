@@ -166,14 +166,6 @@ td {
   margin-right: 10px;
 }
 
-#weatherTable {
-  display: grid;
-  margin: 0;
-  text-align: center;
-  padding: 5px 5px 5px 5px;
-  max-width: 100%;
-}
-
 .tableemoji {
   padding-left: 2px;
   padding-right: 2px;
@@ -181,9 +173,7 @@ td {
 }
 
 #weatherTable {
-  display: inline-block;
   margin: auto;
-  margin-left: 12px;
   text-align: center;
   padding: 0;
 }
@@ -201,12 +191,14 @@ td {
   font-size: 15px;
   font-weight: 400;
 }
-.forecast {
-  font-size: 11px;
-  display: grid;
-  bottom: 20px;
-  margin: 0 auto;
-  text-align: center;
+
+.feelsliketemp {
+  font-size: 10px;
+  text-align: left;
+}
+
+.feelsliketemp span {
+  white-space: nowrap;
 }
 
 footer {
@@ -231,6 +223,7 @@ footer a {
   text-decoration: none;
   color: rgb(128, 0, 64);
 }
+
 #footerLink:hover {
   text-decoration: underline;
 }

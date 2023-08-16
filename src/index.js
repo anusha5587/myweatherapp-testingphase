@@ -62,52 +62,6 @@ function dailyForecast(coordinates) {
   axios.get(apiUrlForecast).then(forecastingReport);
 }
 
-function formatHour(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let hour = date.getHours();
-  let minutes = date.getMinutes();
-  let formattedTime = `${hour.toString().padStart(2, "0")}:${minutes
-    .toString()
-    .padStart(2, "0")}`;
-  return formattedTime;
-}
-
-function hourlyReport(response) {
-  let hourforecast = response.data.hourly;
-  let weatherTable = document.querySelector("#weatherTable");
-  let hourlyForecastHTML = `<div class="row">`;
-
-  hourforecast.forEach(function (forecastHour, index) {
-    if (index < 8) {
-      hourlyForecastHTML =
-        hourlyForecastHTML +
-        `<div class="row cols-3">
-            <div class="col">
-              <span id="time">${formatHour(forecastHour.dt_txt)}</span>
-              <span id="degree">${Math.round(forecastHour.temp)}</span>°C
-              <span id="emoji">
-                <img
-                  src="https://openweathermap.org/img/wn/${
-                    forecastHour.weather[0].icon
-                  }.png"
-                  width="20px"
-                />
-              </span>
-            </div>
-          </div>`;
-    }
-  });
-  hourlyForecastHTML = hourlyForecastHTML + `</div>`;
-  weatherTable.innerHTML = hourlyForecastHTML;
-}
-
-function hourlyForecast(coordinates) {
-  let apiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
-  let apiUrlHourly = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-
-  axios.get(apiUrlHourly).then(hourlyReport);
-}
-
 function displayTemperature(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#tempNumber");
@@ -136,7 +90,6 @@ function displayTemperature(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   dailyForecast(response.data.coord);
-  hourlyForecast(response.data.coord);
 }
 
 function search(city) {
