@@ -57,15 +57,25 @@ function forecastingReport(response) {
 
 function dailyForecast(coordinates) {
   console.log(coordinates);
-  let apiKey = "ad793a6d772939c31783de5822791acf";
+  let apiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
   let apiUrlForecast = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrlForecast).then(forecastingReport);
+}
+
+function formatHour(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+  let formattedTime = `${hour.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")}`;
+  return formattedTime;
 }
 
 function hourlyReport(response) {
   let hourforecast = response.data.hourly;
   let weatherTable = document.querySelector("#weatherTable");
-  let hourlyForecastHTML = `<div class="row">
+  let hourlyForecastHTML = `<div class="row">`;
 
   hourforecast.forEach(function (forecastHour, index) {
     if (index < 8) {
@@ -73,7 +83,7 @@ function hourlyReport(response) {
         hourlyForecastHTML +
         `<div class="row cols-3">
             <div class="col">
-              <span id="time">${formatHour(forecastHour.dt)}</span>
+              <span id="time">${formatHour(forecastHour.dt_txt)}</span>
               <span id="degree">${Math.round(forecastHour.temp)}</span>°C
               <span id="emoji">
                 <img
@@ -84,15 +94,15 @@ function hourlyReport(response) {
                 />
               </span>
             </div>
-          </div>`;}
-
+          </div>`;
+    }
   });
-hourlyForecastHTML = hourlyForecastHTML + `</div>`;
+  hourlyForecastHTML = hourlyForecastHTML + `</div>`;
   weatherTable.innerHTML = hourlyForecastHTML;
 }
 
 function hourlyForecast(coordinates) {
-  let apiKey = "ad793a6d772939c31783de5822791acf";
+  let apiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
   let apiUrlHourly = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrlHourly).then(hourlyReport);
@@ -130,7 +140,7 @@ function displayTemperature(response) {
 }
 
 function search(city) {
-  let apiKey = "ad793a6d772939c31783de5822791acf";
+  let apiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -146,7 +156,7 @@ function weatherDataByGeolocation() {
     navigator.geolocation.getCurrentPosition(function (position) {
       let latitude = position.coords.latitude;
       let longitude = position.coords.longitude;
-      let apiKey = "ad793a6d772939c31783de5822791acf";
+      let apiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
       let apiUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
       axios.get(apiUrlCurrent).then(displayTemperature);
     });
