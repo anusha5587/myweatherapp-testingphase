@@ -168,12 +168,10 @@ td {
 
 #weatherTable {
   display: grid;
-  padding: 0.5px;
   margin: 0;
   text-align: center;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
+  padding: 5px 5px 5px 5px;
+  max-width: 100%;
 }
 
 .tableemoji {
@@ -182,12 +180,21 @@ td {
   text-align: center;
 }
 
-#weatherTable .time {
-  font-size: 20px;
+#weatherTable {
   display: inline-block;
-  margin: 0 auto;
+  margin: auto;
+  margin-left: 12px;
   text-align: center;
   padding: 0;
+}
+
+#weatherTable .time {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#weatherTable .col {
+  border: 1px double rgb(245, 150, 150);
 }
 
 #degree {
@@ -195,8 +202,10 @@ td {
   font-weight: 400;
 }
 .forecast {
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 11px;
+  display: grid;
+  bottom: 20px;
+  margin: 0 auto;
   text-align: center;
 }
 
