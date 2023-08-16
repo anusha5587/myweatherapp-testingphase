@@ -192,20 +192,10 @@ td {
 
 footer {
   text-align: center;
-  margin: 15px;
-  border: 1px double rgb(245, 150, 150);
-  display: block;
-  width: 700px;
-  padding: 5px 5px 5px 5px;
-  border-radius: 6px;
+  margin-left: 25px;
   font-family: "Pacifico", cursive;
   font-size: 15px;
   font-weight: light;
-  background: linear-gradient(
-    179.4deg,
-    rgb(253, 240, 233) 2.2%,
-    rgb(255, 194, 203) 96.2%
-  );
 }
 
 footer a {
